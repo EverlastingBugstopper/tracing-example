@@ -1,6 +1,6 @@
 # tracing-example
 
-Quick example of using the `tracing` crate that shaves some yaks.
+Quick example of using the [`tracing`](https://github.com/tokio-rs/tracing) crate that shaves some yaks.
 
 ```console
 $ cargo run
