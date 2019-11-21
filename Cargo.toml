@@ -5,6 +5,5 @@ authors = ["Avery Harnish <averyharnish@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-tracing = "0.1.10"
-tracing-fmt = "0.1.1"
-tracing-subscriber = "0.1.6"
+tracing = "0.1"
+tracing-subscriber = "0.2.0-alpha.1"

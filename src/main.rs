@@ -40,8 +40,9 @@ fn shave_all(yaks: usize) -> usize {
 }
 
 fn main() {
-    use tracing_fmt::format;
+    use tracing_subscriber::fmt::format;
     use tracing_subscriber::prelude::*;
+    use tracing_subscriber::FmtSubscriber;
 
     let formatter =
         // Construct a custom formatter for `Debug` fields
@@ -52,9 +53,7 @@ fn main() {
             .display_messages()
             .delimited(", ");
 
-    let subscriber = tracing_fmt::FmtSubscriber::builder()
-        .fmt_fields(formatter)
-        .finish();
+    let subscriber = FmtSubscriber::builder().fmt_fields(formatter).finish();
 
     tracing::subscriber::with_default(subscriber, || {
         let number_of_yaks = 3;
